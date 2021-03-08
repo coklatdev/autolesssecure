@@ -30,7 +30,8 @@ while True:
 	print(aww[0]+'|'+aww[1])
 	opts = Options()
 	opts.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36")
-	driver = webdriver.Chrome(executable_path='C:/Python27/chromedriver_win32/chromedriver.exe')
+	# for windows user use => driver = webdriver.Chrome(executable_path='C:/Python27/chromedriver_win32/chromedriver.exe')
+	driver = webdriver.Chrome()
 	driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent')
 	WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="openid-buttons"]/button[1]'))).click()
 	emailInput = driver.find_element_by_xpath('//*[@id="identifierId"]')
@@ -70,8 +71,9 @@ while True:
 			content=driver.page_source
 			result = content.find('Allow less secure apps: OFF')
 			if (result != -1):
-				print("[ENABLING]")
-				driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div[1]/div/div/ul/li/div[1]/div/div[2]/div/div/div[2]').click()
+				print("[ENABLING...]")
+				driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div/div/div/ul/li/div/div[2]/div/div/div[2]').click()
+				print('ENABLED')
 				driver.close()
 			else:
 				print('ENABLED')
@@ -86,8 +88,9 @@ while True:
 			content=driver.page_source
 			result = content.find('Allow less secure apps: OFF')
 		if (result != -1):
-			print("[ENABLING]")
-			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div[1]/div/div/ul/li/div[1]/div/div[2]/div/div/div[2]').click()
+			print("[ENABLING...]")
+			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div/div/div/ul/li/div/div[2]/div/div/div[2]').click()
+			print('ENABLED')
 			driver.close()
 		else:
 			print('ENABLED')
@@ -103,8 +106,9 @@ while True:
 		content=driver.page_source
 		result = content.find('Allow less secure apps: OFF')
 		if (result != -1):
-			print("[ENABLING]")
-			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div[1]/div/div/ul/li/div[1]/div/div[2]/div/div/div[2]').click()
+			print("[ENABLING...]")
+			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div/div/div/ul/li/div/div[2]/div/div/div[2]').click()
+			print('ENABLED')
 			driver.close()
 		else:
 			print('ENABLED')
@@ -119,8 +123,9 @@ while True:
 		content=driver.page_source
 		result = content.find('Allow less secure apps: OFF')
 		if (result != -1):
-			print("[ENABLING]")
-			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div[1]/div/div/ul/li/div[1]/div/div[2]/div/div/div[2]').click()
+			print("[ENABLING...]")
+			driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div[3]/c-wiz/div/div[2]/div/div/div/ul/li/div/div[2]/div/div/div[2]').click()
+			print('ENABLED')
 			driver.close()
 		else:
 			print('ENABLED')
